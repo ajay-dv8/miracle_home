@@ -11,10 +11,10 @@ const NameCard = ({name, room_number, phone, date}:CardProps) => {
   return (
     <div className=" w-full">
       <div className="w-full flex flex-row gap-4 justify-center items-center">
-        <p className=""> {name} </p>
-        {/* <p>{room_number}</p>
+        <p className="">{name}</p>
+        <p>{room_number}</p>
         <p>{phone}</p>
-        <p>{date}</p> */}
+        <p>{date}</p> 
           
         <Separator/>
       </div>
