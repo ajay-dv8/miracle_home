@@ -6,6 +6,7 @@ import { Button } from "./ui/button"
 import { createClient } from "@supabase/supabase-js";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast"
+import { Label } from "./ui/label";
 
 // {searchParams,}: {searchParams: { message: string };}
 const Form = () => {
@@ -88,7 +89,7 @@ const Form = () => {
             <SelectItem value="6">6</SelectItem>
           </SelectContent>
         </Select>
-
+        
         <Input type='date' name='date_of_renewal' placeholder="date_of_renewal" value={date_of_renewal} onChange={e => setDate_of_renewal(e.target.value)} />
 
         </div>

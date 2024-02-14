@@ -39,7 +39,7 @@ export default async function Index() {
         </div>
         <Form />
 
-        <Button className="mt-8 w-full" disabled>
+        <Button className="mt-8 w-full" >
         <Link 
           href="/check_list"
           
@@ -51,14 +51,14 @@ export default async function Index() {
 
       <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
         <p>
-          Developed by{" "}
+          {/* Developed by{" "} */}
           <a
             href="https://ajayportfolio.vercel.app/"
             target="_blank"
             className="font-bold hover:underline"
             rel="noreferrer"
           >
-            Ajay
+            Developer
           </a>
         </p>
       </footer>
