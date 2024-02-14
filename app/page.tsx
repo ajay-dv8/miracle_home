@@ -5,6 +5,8 @@ import ConnectSupabaseSteps from "@/components/ConnectSupabaseSteps";
 import SignUpUserSteps from "@/components/SignUpUserSteps";
 import Header from "@/components/Header";
 import Form from "@/components/form";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function Index() {
   const canInitSupabaseClient = () => {
@@ -39,18 +41,25 @@ export default async function Index() {
           </p>
         </div>
         <Form />
+
+        <Link 
+          href="/success_page"
+          className="mt-4"
+        >
+          <Button>Check List</Button>
+        </Link>
       </div>
 
       <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
         <p>
-          Powered by{" "}
+          Developed by{" "}
           <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
+            href="https://ajayportfolio.vercel.app/"
             target="_blank"
             className="font-bold hover:underline"
             rel="noreferrer"
           >
-            Supabase
+            Ajay
           </a>
         </p>
       </footer>
