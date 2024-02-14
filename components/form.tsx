@@ -70,14 +70,22 @@ const Form = () => {
           type='text' 
           name='name' 
           placeholder="Name" 
-          value={name} onChange={e => setName(e.target.value)}
+          value={name} 
+          onChange={e => setName(e.target.value)}
         />
 
-        <Input type='text' name='phone' placeholder="Phone number" value={phone} onChange={e => setPhone(e.target.value)}/>
+        <Input 
+          type='text' 
+          name='phone' 
+          placeholder="Phone number" 
+          value={phone} 
+          onChange={e => setPhone(e.target.value)}
+        />
 
-        <div className="flex flex-row gap-2 mb-6">
+        <div className="flex flex-col gap-2 mb-6 md:flex-row">
+
         <Select name='room_number'>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[240px]">
             <SelectValue placeholder="room number"/>
           </SelectTrigger>
           <SelectContent className="bg-white">
@@ -90,7 +98,13 @@ const Form = () => {
           </SelectContent>
         </Select>
         
-        <Input type='date' name='date_of_renewal' placeholder="date_of_renewal" value={date_of_renewal} onChange={e => setDate_of_renewal(e.target.value)} />
+        <Input 
+          type='date' 
+          name='date_of_renewal' 
+          placeholder="date_of_renewal" 
+          value={date_of_renewal} 
+          onChange={e => setDate_of_renewal(e.target.value)} 
+        />
 
         </div>
 
