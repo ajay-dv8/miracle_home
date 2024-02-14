@@ -20,7 +20,7 @@ const page = async () => {
       <div>
           <Link href='/'><Button>Go Back</Button></Link>
         </div>
-        
+
         <div>
         <h2 className='text-2xl font-bold'>Please confirm your name</h2>
         <p>Your name should be here if your form has been submitted</p>
@@ -28,7 +28,7 @@ const page = async () => {
 
       </div>
       <div>
-        <div className="w-full flex flex-col gap-4 p-4">
+        <div className="w-full flex flex-col gap-4 p-4 justify-center items-center">
           {data ? data.map((data) => (
             <NameCard 
               key={data.id} 

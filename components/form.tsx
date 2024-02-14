@@ -95,7 +95,7 @@ const Form = () => {
 
         <Button 
           type="submit" 
-          className="w-full" 
+          className="w-full bg-blue-500 hover:bg-blue-400 text-white shadow-2xl" 
           disabled={isLoading}
 
           // onClick={() => {

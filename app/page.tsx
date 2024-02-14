@@ -1,9 +1,6 @@
 import DeployButton from "../components/DeployButton";
 import AuthButton from "../components/AuthButton";
 import { createClient } from "@/utils/supabase/server";
-import ConnectSupabaseSteps from "@/components/ConnectSupabaseSteps";
-import SignUpUserSteps from "@/components/SignUpUserSteps";
-import Header from "@/components/Header";
 import Form from "@/components/form";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -42,12 +39,14 @@ export default async function Index() {
         </div>
         <Form />
 
+        <Button className="mt-8 w-full" disabled>
         <Link 
-          href="/success_page"
-          className="mt-4"
+          href="/check_list"
+          
         >
-          <Button>Check List</Button>
+          Check List
         </Link>
+        </Button>
       </div>
 
       <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
