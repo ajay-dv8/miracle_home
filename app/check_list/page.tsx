@@ -1,4 +1,3 @@
-import NameCard from '@/components/nameCard';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { createClient } from '@supabase/supabase-js';
@@ -13,10 +12,11 @@ const page = async () => {
 
   const { data, error } = await supabase
   .from('tenants')
-  .select('*')
+  .select('*');
+  console.log('data shows', data);
 
   return (
-    <div className='w-full px-20 md:px-4'>
+    <div className='w-full px-2 md:px-20'>
       <div className="flex flex-col justify-center items-center sticky top-0">
         <div>
           <Link href='/'><Button>Go Back</Button></Link>
@@ -29,7 +29,7 @@ const page = async () => {
 
       </div>
       <div className='w-full'>
-        <div className="w-full flex flex-col gap-4 justify-center items-center px-4 md:px-20">
+        <div className="w-full flex flex-col gap-4 justify-center items-center px-4 ">
 
           <Table className='bg-white'>
             <TableCaption>A list of your data.</TableCaption>
@@ -43,8 +43,8 @@ const page = async () => {
           </TableHeader>
 
           <TableBody>
-            {data ? data.map((data) => (
-            <TableRow key={data.id} className=''>
+            {data ? data.map((data:any) => (
+            <TableRow key={data.id}>
               <TableCell>{data.name}</TableCell>
               <TableCell>{data.phone} </TableCell>
               <TableCell>{data.room_number}</TableCell>
